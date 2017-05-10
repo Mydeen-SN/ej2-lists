@@ -1,0 +1,150 @@
+@include export-module('listview-layout') {
+
+  .e-bigger .e-listview,
+  .e-listview.e-bigger {
+    .e-list-item {
+      height: 48px;
+    }
+
+    .e-text-content {
+      line-height: 45px;
+    }
+
+    .e-header {
+      height: 64px;
+    }
+
+    .e-header .e-text {
+      line-height: 30px;
+    }
+
+    .e-but-back {
+      padding-top: 5px;
+    }
+
+    .e-icon-collapsible {
+      line-height: inherit;
+    }
+  }
+
+  .e-listview {
+    border: $listview-border-size solid;
+    display: block;
+    overflow: auto;
+    position: relative;
+    width: 100%;
+
+    @at-root {
+
+      & .e-list-item {
+        border-bottom: $listview-border-size solid;
+        height: 36px;
+        padding: 0 16px;
+      }
+
+      & .e-list-parent {
+        margin: 0;
+        padding: 0;
+      }
+
+      & .e-header {
+        border-bottom: 1px solid;
+        display: block;
+        height: 48px;
+        padding: 16px;
+      }
+
+      & .e-has-header > .e-view {
+        top: 45px;
+      }
+
+      & .e-icons {
+        margin-top: 2px;
+      }
+
+      & .e-but-back {
+        padding-right: 30px;
+        vertical-align: middle;
+        width: 20px;
+      }
+
+      & .e-list-item:last-child {
+        border-bottom: 0;
+      }
+
+      & .e-list-group-item {
+        font-weight: 600;
+        padding-left: 16px;
+      }
+
+      & .e-icon-collapsible {
+        float: right;
+        font-size: 12px;
+        line-height: 34px;
+      }
+
+      & .e-text-content {
+        height: 100%;
+        line-height: 35px;
+        position: relative;
+        vertical-align: middle;
+      }
+
+      & .e-text-content * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      & .e-list-text {
+        cursor: default;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+      }
+
+      & .e-list-icon + .e-list-text,
+      .e-icon-collapsible + .e-list-text {
+        width: calc(100% - 56px);
+      }
+
+      & .e-list-icon + .e-icon-collapsible + .e-list-text {
+        width: calc(100% - 70px);
+      }
+
+      & .e-list-icon {
+        height: 40px;
+        margin-right: 16px;
+        width: 30px;
+      }
+
+      & .e-content {
+        overflow: hidden;
+        position: relative;
+      }
+
+      & .e-header .e-text {
+        cursor: default;
+        line-height: 15px;
+        text-indent: 0;
+      }
+
+      & .e-text .e-headertext {
+        display: inline-block;
+      }
+
+      &.e-rtl {
+        & .e-icon-collapsible {
+          float: left;
+          margin-left: 17px;
+          margin-right: auto;
+        }
+
+        & .e-but-back {
+          padding-left: auto;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@include export-module('listview-icons') {
+  /*! component icons */
+  .e-listview {
+
+    .e-icon-back::before {
+      content: '\e85b';
+    }
+
+    .e-icon-collapsible::before {
+      content: '\e844';
+    }
+
+    &.e-rtl {
+      & .e-icon-back::before {
+        content: '\e860';
+      }
+
+      & .e-icon-collapsible::before {
+        content: '\e839';
+      }
+    }
+
+  }
+}

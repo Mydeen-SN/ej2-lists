@@ -1,0 +1,42 @@
+@include export-module('listview-theme') {
+
+  .e-listview {
+    border-color: $listview-line-color;
+    font-family: 'Roboto';
+    font-size: $listview-font-size;
+
+    @at-root {
+      & .e-header {
+        background-color: $listview-header-bg;
+        border-color: $listview-header-border;
+        color: $listview-header-text-color;
+        font-size: $listview-header-font-size;
+      }
+
+      & .e-icons {
+        color: $listview-icon-color;
+      }
+
+      & .e-list-item {
+        background-color: $listview-background;
+        border-color: $listview-line-color;
+        color: $listview-text-color;
+      }
+
+      & .e-list-item.e-hover {
+        background-color: $listview-background-hover;
+        color: $listview-text-color;
+      }
+
+      & .e-list-item.e-active {
+        background-color: $listview-background-selection;
+        color: $listview-text-color;
+      }
+
+      & .e-list-group-item {
+        background-color: $listview-groupheader-bg;
+        color: $listview-groupheader-text-color;
+      }
+    }
+  }
+}
